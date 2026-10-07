@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="wallet_id">QP_WALLET_8831</string>
+    <boolean name="kyc_verified" value="true" />
+    <int name="daily_limit_inr" value="200000" />
+    <boolean name="two_factor_auth" value="true" />
+    <int name="last_login_epoch_sec" value="1716381500" />
+</map>

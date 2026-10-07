@@ -1,0 +1,5 @@
+package_name,role,databases,tables_and_records,total_records,dangerous_permissions_count,timestamp_format,findings
+com.citycommute.rides,Ride Hailing & Geo-Navigation,trips.db,trip_records (2 rec),2,4,ISO-8601 UTC Strings (`start_time_iso`),"2 GPS trip records, pickup/dropoff coordinates, route destination matching rendezvous (Cyber Park Gate 3), driver details."
+com.quickpay.wallet,Financial Wallet & Digital Payments,transactions.db,ledger (3 rec),3,4,Unix Epoch Seconds (`timestamp_sec`),"Financial ledger (3 transactions), high-value transfer of ₹75,000 to Vikram M, KYC profile in shared_prefs."
+com.securechat.messenger,Encrypted Instant Messaging,chat_history.db; contacts.db,messages (5 rec); conversation_metadata (2 rec); contacts (3 rec),10,5,Unix Epoch Milliseconds (`timestamp_ms`),"5 chat messages, contact directory (3 contacts), attachment paths (`offshore_notes.enc`), unread counts."
+com.stealth.calc_vault,Anti-Forensic Calculator Vault,vault_index.db,hidden_files (3 rec),3,7,Unix Epoch Milliseconds (`added_epoch_ms`),"3 encrypted/hidden files (`swiss_bank_kyc.pdf`, `passwords_backup.kdbx`), AES-256 ciphers, hidden directory path."

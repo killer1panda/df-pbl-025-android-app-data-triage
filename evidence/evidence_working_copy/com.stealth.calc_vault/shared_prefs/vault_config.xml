@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="passcode_hash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</string>
+    <string name="fake_calc_history">12+45=57; 100/4=25</string>
+    <boolean name="intruder_selfie_enabled" value="true" />
+    <boolean name="vault_active" value="true" />
+    <string name="obscure_directory">/sdcard/.calculator_hidden</string>
+</map>

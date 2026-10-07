@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="user_phone">+91-9876543210</string>
+    <string name="account_id">usr_991823</string>
+    <boolean name="encryption_enabled" value="true" />
+    <string name="backup_frequency">daily</string>
+    <int name="last_sync_timestamp" value="1716382000000" />
+    <boolean name="biometric_unlock" value="true" />
+</map>

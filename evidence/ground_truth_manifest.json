@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "project_code": "DF-PBL-025",
+    "student_name": "ARYAN",
+    "student_id": "500121030",
+    "generation_time_utc": "2026-10-07T15:42:21.300055+00:00",
+    "target_os": "Android 14 (API 34)",
+    "acquisition_type": "Controlled Logical/File System Extraction"
+  },
+  "packages": {
+    "com.securechat.messenger": {
+      "role": "Encrypted Instant Messaging",
+      "manifest_permissions_count": 9,
+      "dangerous_permissions": [
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "databases": [
+        "chat_history.db",
+        "contacts.db"
+      ],
+      "expected_message_count": 5,
+      "expected_contact_count": 3,
+      "timestamp_format": "Unix Epoch Milliseconds"
+    },
+    "com.quickpay.wallet": {
+      "role": "Financial Payment & Wallet",
+      "manifest_permissions_count": 6,
+      "dangerous_permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.READ_PHONE_STATE"
+      ],
+      "databases": [
+        "transactions.db"
+      ],
+      "expected_transaction_count": 3,
+      "total_debit_amount": 75420.5,
+      "timestamp_format": "Unix Epoch Seconds"
+    },
+    "com.citycommute.rides": {
+      "role": "Ride Hailing & Geo Navigation",
+      "manifest_permissions_count": 5,
+      "dangerous_permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.CALL_PHONE"
+      ],
+      "databases": [
+        "trips.db"
+      ],
+      "expected_trip_count": 2,
+      "timestamp_format": "ISO-8601 UTC Strings"
+    },
+    "com.stealth.calc_vault": {
+      "role": "Disguised Vault / Suspicious File Container",
+      "manifest_permissions_count": 9,
+      "dangerous_permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.MANAGE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.QUERY_ALL_PACKAGES",
+        "android.permission.READ_CALL_LOG",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "databases": [
+        "vault_index.db"
+      ],
+      "expected_hidden_files_count": 3,
+      "timestamp_format": "Unix Epoch Milliseconds"
+    }
+  }
+}

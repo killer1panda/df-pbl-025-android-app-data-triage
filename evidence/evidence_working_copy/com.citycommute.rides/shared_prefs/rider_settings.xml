@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <float name="rider_rating" value="4.88" />
+    <string name="default_payment">QUICKPAY</string>
+    <boolean name="auto_share_trip" value="false" />
+    <float name="saved_home_lat" value="28.6139" />
+    <float name="saved_home_lng" value="77.209" />
+</map>
