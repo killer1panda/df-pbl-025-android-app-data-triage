@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DF-PBL-025 Defense Presentation - ARYAN (500121030)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 90vw;
+            max-width: 1200px;
+            height: 82vh;
+            background: #1e293b;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border: 1px solid #334155;
+            padding: 40px 60px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .slide-container.active {
+            display: flex;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 15px;
+        }
+        .badge {
+            background: #0284c7;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+        .header-meta {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 25px 0;
+            overflow-y: auto;
+        }
+        h1 {
+            font-size: 38px;
+            color: #38bdf8;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 24px;
+            color: #f1f5f9;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        p, li {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 28px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #334155;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        th {
+            background-color: #0f172a;
+            color: #38bdf8;
+            font-weight: 700;
+        }
+        tr:nth-child(even) td {
+            background-color: #1e293b;
+        }
+        tr:nth-child(odd) td {
+            background-color: #243247;
+        }
+        code {
+            font-family: Menlo, Consolas, Monaco, monospace;
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .tag-pass {
+            background: #065f46;
+            color: #34d399;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #334155;
+            padding-top: 15px;
+            font-size: 14px;
+            color: #64748b;
+        }
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        button {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #0369a1;
+        }
+        button:disabled {
+            background: #334155;
+            color: #64748b;
+            cursor: not-allowed;
+        }
+        .time-hint {
+            color: #38bdf8;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1 -->
+    <div class="slide-container active" id="slide-1">
+        <div class="header">
+            <span class="badge">UPES DEHRADUN | DF-PBL-025</span>
+            <span class="header-meta">Digital Forensics Viva Defense</span>
+        </div>
+        <div class="content" style="text-align: center; padding-top: 40px;">
+            <div style="font-size: 18px; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">
+                Department of Systemics • School of Computer Science
+            </div>
+            <h1>Android App Data Triage</h1>
+            <h2 style="color: #94a3b8; font-weight: 400; max-width: 800px; margin: 0 auto 30px auto;">
+                Controlled Mini-Lab: Systematic Identification of App Databases, Permissions, and Timestamps
+            </h2>
+            <div style="background: #0f172a; padding: 25px; border-radius: 12px; display: inline-block; text-align: left; border: 1px solid #334155; min-width: 500px;">
+                <p>👤 <strong>Candidate</strong>: ARYAN</p>
+                <p>🆔 <strong>SAP ID</strong>: 500121030</p>
+                <p>👨‍🏫 <strong>Faculty Evaluator</strong>: Dr. Keshav Sinha (Assistant Professor - SS)</p>
+                <p>🔬 <strong>Performance Format</strong>: Controlled Mini-Lab (100% Verified)</p>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 0:00 - 1:00</span>
+            <span>Slide 1 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide-container" id="slide-2">
+        <div class="header">
+            <span class="badge">PROBLEM STATEMENT & OBJECTIVES</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content">
+            <h1>The Forensic Triage Challenge</h1>
+            <p style="font-size: 20px; color: #f1f5f9; margin-bottom: 20px;">
+                Modern Android physical acquisitions under <code>/data/data/</code> present severe data volume bottlenecks. Investigators cannot reverse-engineer 100+ apps during rapid incident response.
+            </p>
+            <div style="background: #0f172a; border-left: 4px solid #38bdf8; padding: 15px 20px; margin-bottom: 25px; border-radius: 4px;">
+                <strong style="color: #38bdf8;">Assigned Forensic Question:</strong><br>
+                <em>"Identify useful app databases, permissions and timestamps in a controlled Android dataset."</em>
+            </div>
+            <ul>
+                <li><strong>Evidence Preservation</strong>: Establish immutable SHA-256 and MD5 baselines (ISO/IEC 27037).</li>
+                <li><strong>Permission Profiling</strong>: Distinguish Normal vs. Dangerous permissions (AOSP standard).</li>
+                <li><strong>Database Introspection</strong>: Discover SQLite tables, PRAGMA metadata, and WAL states.</li>
+                <li><strong>Temporal Normalization</strong>: Synchronize Epoch ms, Epoch sec, and ISO strings into UTC/IST.</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 1:00 - 2:00</span>
+            <span>Slide 2 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide-container" id="slide-3">
+        <div class="header">
+            <span class="badge">EVIDENCE INTEGRITY & CHAIN OF CUSTODY</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content">
+            <h1>Evidence Preservation & Hashing</h1>
+            <p>In strict adherence to Rule #3, originals were sealed into an immutable master archive:</p>
+            <div style="background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #334155;">
+                <p>📦 <strong>Master Evidence Archive</strong>: <code>evidence/evidence_original/evidence_master.zip</code></p>
+                <p>🔒 <strong>Master SHA-256 Digest</strong>: <code>bc0b750430f6caa3c3b4d21a03fe22caf18e41f162fe624792b59718543c6f99</code></p>
+                <p>🛡️ <strong>Chain-of-Custody Discipline</strong>: Triage executed strictly on verified working copies.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Evidence Relative Path</th>
+                        <th>Classification</th>
+                        <th>SHA-256 Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1-4</td>
+                        <td><code>com.securechat.messenger/</code> (Manifest, Prefs, 2 DBs)</td>
+                        <td>Encrypted Chat</td>
+                        <td><span class="tag-pass">VERIFIED MATCH</span></td>
+                    </tr>
+                    <tr>
+                        <td>5-7</td>
+                        <td><code>com.quickpay.wallet/</code> (Manifest, Prefs, Ledger DB)</td>
+                        <td>Financial Payments</td>
+                        <td><span class="tag-pass">VERIFIED MATCH</span></td>
+                    </tr>
+                    <tr>
+                        <td>8-10</td>
+                        <td><code>com.citycommute.rides/</code> (Manifest, Prefs, Trips DB)</td>
+                        <td>GPS Navigation</td>
+                        <td><span class="tag-pass">VERIFIED MATCH</span></td>
+                    </tr>
+                    <tr>
+                        <td>11-13</td>
+                        <td><code>com.stealth.calc_vault/</code> (Manifest, Prefs, Vault DB)</td>
+                        <td>Concealed Vault</td>
+                        <td><span class="tag-pass">VERIFIED MATCH</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 2:00 - 3:00</span>
+            <span>Slide 3 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide-container" id="slide-4">
+        <div class="header">
+            <span class="badge">TECHNICAL EXECUTION: TRIAGE TABLE</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content">
+            <h1>Master Forensic Triage Table</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>App Package</th>
+                        <th>Databases</th>
+                        <th>Records</th>
+                        <th>Dangerous Permissions</th>
+                        <th>Timestamp Format</th>
+                        <th>Key Finding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>com.securechat.messenger</code></td>
+                        <td><code>chat_history.db</code><br><code>contacts.db</code></td>
+                        <td>5 msgs<br>3 contacts</td>
+                        <td>5 Dangerous<br>(Camera, Mic, GPS)</td>
+                        <td>Epoch ms</td>
+                        <td>Transfer coordination & rendezvous scheduled at Cyber Park Gate 3.</td>
+                    </tr>
+                    <tr>
+                        <td><code>com.quickpay.wallet</code></td>
+                        <td><code>transactions.db</code></td>
+                        <td>3 txns</td>
+                        <td>4 Dangerous<br>(Biometrics, Phone)</td>
+                        <td>Epoch sec</td>
+                        <td>₹75,000 debit to Vikram M matching chat timestamp.</td>
+                    </tr>
+                    <tr>
+                        <td><code>com.citycommute.rides</code></td>
+                        <td><code>trips.db</code></td>
+                        <td>2 trips</td>
+                        <td>4 Dangerous<br>(Background GPS)</td>
+                        <td>ISO-8601 UTC</td>
+                        <td>Suspect transit to Cyber Park Gate 3 (15:05-15:25 UTC).</td>
+                    </tr>
+                    <tr>
+                        <td><code>com.stealth.calc_vault</code></td>
+                        <td><code>vault_index.db</code></td>
+                        <td>3 files</td>
+                        <td>7 Dangerous<br>(Overlay, Query All)</td>
+                        <td>Epoch ms</td>
+                        <td>Hidden confidential KYC and passwords encrypted with AES-256.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 3:00 - 4:15</span>
+            <span>Slide 4 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide-container" id="slide-5">
+        <div class="header">
+            <span class="badge">TEMPORAL NORMALIZATION & TIMELINE</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content">
+            <h1>Unified Multi-App Timeline</h1>
+            <p>Normalizing disparate timestamp schemes (ms, sec, ISO) into UTC resolves the evidentiary chain:</p>
+            <div style="background: #0f172a; padding: 18px; border-radius: 10px; font-family: monospace; font-size: 15px; line-height: 1.8; border: 1px solid #334155;">
+                <p><span style="color: #38bdf8;">12:00:00 UTC</span> • <code>com.stealth.calc_vault</code> → swiss_bank_kyc.pdf stored in hidden vault</p>
+                <p><span style="color: #38bdf8;">12:20:00 UTC</span> • <code>com.securechat.messenger</code> → Suspect messages Vikram M regarding statement</p>
+                <p><span style="color: #38bdf8;">12:23:20 UTC</span> • <code>com.securechat.messenger</code> → <em>"Transfer scheduled for 14:00 UTC via QuickPay"</em></p>
+                <p><span style="color: #38bdf8;">12:30:00 UTC</span> • <code>com.securechat.messenger</code> → Emergency meet requested at Cyber Park Gate 3</p>
+                <p><span style="color: #38bdf8;">12:40:00 UTC</span> • <code>com.quickpay.wallet</code> → ₹75,000.00 debited to Vikram M (<code>TXN_20240522_001</code>)</p>
+                <p><span style="color: #38bdf8;">15:05:00 UTC</span> • <code>com.citycommute.rides</code> → Suspect boards cab (Ramesh Kumar, UP16-AB-4321)</p>
+                <p><span style="color: #38bdf8;">15:25:00 UTC</span> • <code>com.citycommute.rides</code> → Suspect arrives at Cyber Park Gate 3</p>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 4:15 - 5:15</span>
+            <span>Slide 5 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide-container" id="slide-6">
+        <div class="header">
+            <span class="badge">REPRODUCIBLE MINI-LAB TEST HARNESS</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content">
+            <h1>Automated Reproducibility (Mini-Lab)</h1>
+            <p>Executed <code>test_controlled_experiment.py</code> against mathematically known ground truth:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Assertion Category</th>
+                        <th>Evaluated Condition</th>
+                        <th>Target</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Evidence Integrity</td>
+                        <td>Zero hash divergence across all 13 artifacts</td>
+                        <td>0 mismatches</td>
+                        <td><span class="tag-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>Database Discovery</td>
+                        <td>Record counts for messages, ledger, trips, vault</td>
+                        <td>Exact counts</td>
+                        <td><span class="tag-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>Permissions Auditing</td>
+                        <td>Detection of <code>SYSTEM_ALERT_WINDOW</code> & Dangerous Flags</td>
+                        <td>7 dangerous</td>
+                        <td><span class="tag-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>Temporal Normalization</td>
+                        <td>Epoch ms, Epoch sec, ISO string translations & ordering</td>
+                        <td>Monotonic order</td>
+                        <td><span class="tag-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cross-App Correlation</td>
+                        <td>Chat rendezvous matches GPS; Chat payment matches Ledger</td>
+                        <td>True</td>
+                        <td><span class="tag-pass">PASS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="margin-top: 20px; background: #065f46; color: #a7f3d0; padding: 12px 20px; border-radius: 8px; font-weight: bold; text-align: center;">
+                ✅ 23 / 23 ASSERTIONS PASSED (100.0% ACCURACY) — ONE-CLICK LIVE RERUN VERIFIED
+            </div>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 5:15 - 6:15</span>
+            <span>Slide 6 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide-container" id="slide-7">
+        <div class="header">
+            <span class="badge">LIMITATIONS & ALTERNATIVE EXPLANATIONS</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content">
+            <h1>Observation vs. Interpretation vs. Inference</h1>
+            <p>Mandatory forensic distinction enforced throughout the investigation:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Scientific Definition</th>
+                        <th>Case Application</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Observation</strong></td>
+                        <td>Direct byte facts from disk.</td>
+                        <td>Row in <code>ledger</code> has <code>TXN_20240522_001</code>, <code>75000.0</code>, timestamp <code>1716381600</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interpretation</strong></td>
+                        <td>Technical software mechanism.</td>
+                        <td>QuickPay debited ₹75,000 at 2024-05-22 12:40:00 UTC to counterparty.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inference</strong></td>
+                        <td>Human investigative deduction.</td>
+                        <td>User transferred funds to Vikram Malhotra as part of a transaction.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="background: #0f172a; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #f59e0b;">
+                <strong style="color: #f59e0b;">Forensic Limitations & Alternative Explanations:</strong><br>
+                1. <em>Attribution Limitation</em>: Artifacts do not prove physical user identity without external biometrics/CCTV.<br>
+                2. <em>Overlay Vulnerability</em>: <code>SYSTEM_ALERT_WINDOW</code> in the vault app creates potential for UI spoofing attacks.
+            </div>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 6:15 - 7:15</span>
+            <span>Slide 7 / 8</span>
+        </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide-container" id="slide-8">
+        <div class="header">
+            <span class="badge">SUBMISSION SUMMARY & CONCLUSION</span>
+            <span class="header-meta">DF-PBL-025 | Aryan (500121030)</span>
+        </div>
+        <div class="content" style="text-align: center; padding-top: 20px;">
+            <h1>Submission Checklist Verified</h1>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin: 25px 0;">
+                <div style="background: #0f172a; padding: 15px; border-radius: 8px; border: 1px solid #334155;">
+                    <p>📄 <strong>Formal Report PDF</strong>: 6 Pages, Styled, UPES Coversheet</p>
+                    <p>🛡️ <strong>Integrity Log</strong>: 13 Artifacts, SHA-256 Hashes Verified</p>
+                    <p>⚙️ <strong>Technical Artefact</strong>: <code>android_triage_engine.py</code></p>
+                </div>
+                <div style="background: #0f172a; padding: 15px; border-radius: 8px; border: 1px solid #334155;">
+                    <p>🧪 <strong>Controlled Test</strong>: 23/23 Assertions (100% Passed)</p>
+                    <p>📚 <strong>Citations</strong>: NIST SP 800-86 / ISO 27037</p>
+                    <p>🤖 <strong>AI Disclosure</strong>: Fully Declared & Independently Verified</p>
+                </div>
+            </div>
+            <p style="font-size: 20px; color: #38bdf8; font-weight: 600;">
+                🔗 GitHub: github.com/killer1panda/df-pbl-025-android-app-data-triage
+            </p>
+            <p style="font-size: 16px; color: #94a3b8; margin-top: 15px;">
+                Ready for Live Rerun & Faculty Defense with Dr. Keshav Sinha.
+            </p>
+        </div>
+        <div class="footer">
+            <span class="time-hint">⏱️ Allocated Time: 7:15 - 8:00</span>
+            <span>Slide 8 / 8</span>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="prevBtn" onclick="prevSlide()" disabled>← Previous</button>
+        <span id="slideIndicator" style="font-size: 16px; font-weight: 600; color: #94a3b8;">Slide 1 of 8</span>
+        <button id="nextBtn" onclick="nextSlide()">Next →</button>
+        <button onclick="toggleFullscreen()" style="background: #334155;">⛶ Fullscreen</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        function updateSlide() {
+            for (let i = 1; i <= totalSlides; i++) {
+                const el = document.getElementById(`slide-${i}`);
+                if (el) el.classList.remove('active');
+            }
+            const activeEl = document.getElementById(`slide-${currentSlide}`);
+            if (activeEl) activeEl.classList.add('active');
+
+            document.getElementById('slideIndicator').innerText = `Slide ${currentSlide} of ${totalSlides}`;
+            document.getElementById('prevBtn').disabled = (currentSlide === 1);
+            document.getElementById('nextBtn').disabled = (currentSlide === totalSlides);
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                prevSlide();
+            } else if (e.key === 'f' || e.key === 'F') {
+                toggleFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
